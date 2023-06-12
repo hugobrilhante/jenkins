@@ -22,3 +22,5 @@ Example usage:
 Please make sure to provide valid paths to your SSH key files and specify a valid remote host.
 The script assumes that you have Docker and docker-compose installed on your system.
 
+> Note: It is necessary to follow the instructions to reset the number of executors in the built-in node. It's quite simple, just click on the Manage button that appears next to the alert and put a zero in the place of 2 and save.
+
