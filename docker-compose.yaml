@@ -1,0 +1,20 @@
+services:
+  jenkins:
+    build:
+      context: .
+      dockerfile: controller/Dockerfile
+    depends_on:
+      - node
+    ports:
+      - 8080:8080
+    restart: on-failure
+    volumes:
+      - jenkins_home:/var/jenkins_home
+  node:
+    build:
+      context: .
+      dockerfile: node/Dockerfile
+    restart: on-failure
+
+volumes:
+  jenkins_home:
